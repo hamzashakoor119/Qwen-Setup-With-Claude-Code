@@ -10,6 +10,7 @@ Before beginning, make sure the following are installed:
 
 ## 🧩 Qwen CLI Installation
 Install the latest Qwen Code CLI:
+Open a new terminal and paste this command into the terminal. After Qwen is installed globally, check it by using the second command "qwen --version".
 
 ```bash
 npm install -g @qwen-code/qwen-code@latest
@@ -25,6 +26,7 @@ qwen --version
 
 ## 🧩 Claude Code Router Installation
 Install Claude Code and the router globally:
+Again open a new terminal and paste this command into the terminal. After the Claude Router is installed, move on to the next step.
 
 ```bash
 npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
@@ -32,11 +34,16 @@ npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
 
 ---
 
-## 🔑 Step 2: Get Your Qwen Access Token
+
+
+## 🔑 Step 1: Get Your Qwen Access Token
+
 
 Find your access token in:
+Open a new terminal, type "code ." to open the current directory in VS Code. Find the ".qwen" folder, open it, and you will see the "oauth_creds.json" file in the ".qwen" folder. Copy the "access_token" and exit from the ".qwen" folder. Then find the ".claude-code-router" folder, open it, and you will see the "config.json" file. Open it and replace the access token with your API key.
 ```
 C:\Users\PC_USER\.qwen\oauth_creds.json
+
 ```
 
 You will see something like this:
@@ -55,7 +62,7 @@ Copy your **access_token** — you'll add it to the router config.
 
 ---
 
-## 📁 Step 3: Create Required Folders
+## 📁 Step 2: Create Required Folders
 Run inside your terminal:
 
 ```bash
@@ -64,7 +71,7 @@ mkdir -p ~/.claude-code-router ~/.claude
 
 ---
 
-## ⚙️ Step 4: Create the Router Configuration
+## ⚙️ Step 3: Create the Router Configuration
 Paste this to generate the config file:
 
 ```bash
@@ -92,24 +99,31 @@ cat > ~/.claude-code-router/config.json << 'EOF'
     "background": "qwen,qwen3-coder-plus",
     "think": "qwen,qwen3-coder-plus",
     "longContext": "qwen,qwen3-coder-plus",
-    "longContextThreshold": 60000
+    "longContextThreshold": 60000,
+    "webSearch": "qwen,qwen3-coder-plus"
   }
 }
 EOF
 ```
 
-## 🚀 Step 5: Start the Router
-Start the Claude Code router:
+## 🚀 Step 4: Start the Router
+Restart the Claude Code router:
 
 ```bash
-claude-code-router
+ccr restart
 ```
 
-## 🧪 Step 6: Test the Setup
-Test your Claude Code setup with the Qwen backend:
+## 🧪 Step 5: Test the Setup
+Launch Claude Code with Qwen support:
 
 ```bash
-claude-code --help
+ccr code
+```
+
+Test:
+
+```
+> hi
 ```
 
 ---
@@ -127,3 +141,32 @@ You can use different Qwen models based on your needs:
 - `qwen3-coder-plus`: Good balance of capability and speed
 - `qwen3-coder-max`: Most capable for complex tasks
 - `qwen3-coder-turbo`: Fastest for simple tasks
+
+---
+
+## 🔄 Handling 401 Token Errors
+If your Qwen OAuth token expires:
+
+### 1️⃣ Reauthenticate
+If tokens don't match, delete `oauth_creds.json` and run:
+
+```bash
+qwen
+```
+
+### 2️⃣ Update your router config
+```powershell
+notepad "$env:USERPROFILE\.claude-code-router\config.json"
+```
+
+Replace `api_key` with the new `access_token`.
+
+### 3️⃣ Restart the router
+```bash
+ccr restart
+```
+
+PowerShell users: ensure your shell environment is correctly set.
+
+---
+Don't forget to subscribe Youtube Channel [Subhan Kaladi](https://www.youtube.com/@subhankaladi)
