@@ -16,12 +16,12 @@ node --version
 If version is 18 or higher, continue. Otherwise, download from [https://nodejs.org](https://nodejs.org)
 
 ## Setup Steps
-```
+
 ### Step 1: Install Claude Code and Router
 Open PowerShell, Run This Command:
 ```
 npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
-
+```
 ### Step 2: Install Qwen CLI
 In PowerShell, Run This Command:
 ```
