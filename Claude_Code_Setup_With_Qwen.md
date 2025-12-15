@@ -17,23 +17,25 @@ If version is 18 or higher, continue. Otherwise, download from [https://nodejs.o
 
 ## Setup Steps
 
-### Step 1: Install Qwen CLI
-In PowerShell, run:
+### Step 1: Install Claude Code and Router
+Open PowerShell, run Run This Command:
+```
+npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
+
+### Step 2: Install Qwen CLI
+In PowerShell, run This Command:
 ```
 npm install -g @qwen-code/qwen-code@latest
 ```
 
-### Step 2: Login to Qwen
+### Step 3: Login to Qwen
 In PowerShell, run:
 ```
 qwen
 ```
 Follow the login steps in your browser.
 
-### Step 3: Install Claude Code and Router
-In PowerShell, run:
-```
-npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
+
 ```
 
 ### Step 4: Find Your Qwen Access Token
