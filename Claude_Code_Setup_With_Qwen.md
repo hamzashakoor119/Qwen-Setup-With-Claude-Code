@@ -24,7 +24,9 @@ npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
 ```
 Chek Installed Or Not :
 ```
-claude-code-router --version
+ccr --version
+or
+ccr help
 ```
 
 ### Step 2: Install Qwen CLI
