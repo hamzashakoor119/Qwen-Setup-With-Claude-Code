@@ -21,8 +21,8 @@ If version is 18 or higher, continue. Otherwise, download from [https://nodejs.o
 Open PowerShell, Run This Command:
 ```
 npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
+```
 Chek Installed Or Not :
-
 ```
 claude-code-router --version
 ```
