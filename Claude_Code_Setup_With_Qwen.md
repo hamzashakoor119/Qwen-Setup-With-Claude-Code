@@ -56,7 +56,7 @@ New PowerShell Open Kro Or Yee Command Runn Kro:
 ```
 code .
 ```
-VS Code Open Hoga Waha yee folder find kro root directory main " .caude-code-router " ugr mill jaye too good nhi mily to manully ctreate kroo.
+VS Code Open Hoga Waha yee folder find kro root directory main " .claude-code-router " ugr mill jaye too good nhi mily to manully ctreate kroo.
 Root directory main 1 folder create kroo " .claude-code-route " ky name sy then us main 1 file create kroo " config.json " is file main yee code paste kro or save kroo"
 
 ```
