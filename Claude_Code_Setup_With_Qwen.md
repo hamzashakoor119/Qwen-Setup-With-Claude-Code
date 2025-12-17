@@ -12,6 +12,7 @@ Setup shuru karne se pehle ye cheezen lazmi hain:
 - 
 ### Node.js Version Check
 
+Har Baar PowerShell Window Directory Py hi Open Krna Hai , Keyboard Sy Window KA Button press Kry Opr Powershell Likhy.
 PowerShell open karo aur ye command run karo:
 
 ```
@@ -63,38 +64,13 @@ Browser open hoga.
 Login steps follow karo.
 Login complete hone ke baad PowerShell band mat karo.
 
-## Step 4: Qwen Access Token Find karo
+## Step 4:Config Folders Create karo
+New PowerShell Open Kro Or Yee Command Runn Kro:
 
-Is file ko open karo:
-
-C:\Users\YourUsername\.qwen\oauth_creds.json
-
-YourUsername ki jagah apna Windows username hoga.
-
-Is file ko Notepad mein open karo aur yahan se token copy karo:
-
-"access_token": "YAHAN_WALA_TOKEN"
-
-Sirf token copy karo, quotes ke baghair.
-
-## Step 5: Config Folders Create karo
-
-PowerShell mein ye commands run karo:
 ```
-New-Item -ItemType Directory -Path "$env:USERPROFILE\.claude-code-router" -Force
-New-Item -ItemType Directory -Path "$env:USERPROFILE\.claude" -Force
+code .
 ```
-## Step 6: Router Config File Create karo
-
-PowerShell mein ye command run karo:
-```
-notepad "$env:USERPROFILE\.claude-code-router\config.json"
-```
-Notepad open hoga.
-Neeche diya gaya code paste karo.
-
-IMPORTANT:
-YOUR_QWEN_ACCESS_TOKEN_HERE ki jagah apna real token paste karo.
+VS Code Open Hoga Waha root directory main 1 folder create kroo " .claude-code-route " ky name sy then us main 1 file create kroo " config.json " is file main yee code paste kro or save kroo"
 
 ```
 {
@@ -126,9 +102,11 @@ YOUR_QWEN_ACCESS_TOKEN_HERE ki jagah apna real token paste karo.
 }
 ```
 
-File save karo aur Notepad band kar do.
+## Step 5: Qwen Access Token Find karo
 
-## Step 7: Router Start karo
+Rot Directory main 1 folder find kroo " .qwen " ky name sy hoga usy open kroo us main 1 file hogi " oauth_creds.json " us file ko open kroo or waha sy access token copy kroo or " .claude-code-router " main " config.json " file main api ki gaha yee access tokrn paste kro or save kro :
+
+## Step 6: Router Start karo
 
 PowerShell mein ye command run karo:
 
@@ -141,7 +119,7 @@ Service started successfully
 
 To matlab router sahi chal raha hai.
 
-## Step 8: Claude Code Test karo
+## Step 7: Claude Code Test karo
 
 PowerShell mein likho:
 
