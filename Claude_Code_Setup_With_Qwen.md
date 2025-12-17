@@ -21,7 +21,7 @@ Agar nahi ho to Node.js yahan se install karo:
 https://nodejs.org
 
 ## Step 1: Claude Code aur Router Install karo
-Har Baar PowerShell Window Directory Py hi Open Krna Hai , Keyboard Sy Window Ka Button press Kry Or Powershell Likhy.
+Claude Code Setup Or Configration Ky Liaye Har Baar PowerShell Window Directory Py hi Open Krna Hai , Keyboard Sy Window Ka Button press Kry Or Powershell Likhy.
 PowerShell open karo aur ye command run karo:
 
 ```
@@ -134,6 +134,9 @@ hi
 
 Aur Enter press karo.
 Agar reply aa jaye to setup successful hai.
+
+## Step 8: Move On Your Project
+Apny Project Main aaky new terminal open kry or type kry " ccr code " ugr service ka error dyy too type kry " ccr restart : or service successful hony ky baad type kry " ccr code " ugr claude open hoo jaye too pehly usy hi/hellow kr ky chek kry ugr responce dy raha hai too apna kaam start kr dain .
 
 # Note :
 Ugr Start main hi yaa use krty hoye yaaa api ka error aye yaa api ,token limits etc ka error aye too " . qwen " ka folder delete kr ky Step #4 sy Step #7 Tak Steps dubara follow kro issue resolve hoo jaye ga.
