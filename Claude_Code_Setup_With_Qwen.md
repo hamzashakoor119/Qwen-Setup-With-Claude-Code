@@ -71,6 +71,7 @@ notepad "$env:USERPROFILE\.claude-code-router\config.json"
 
 Copy and paste this text into the file that opens. **Replace `YOUR_QWEN_ACCESS_TOKEN_HERE` with your actual access token from Step 4**:
 
+```
 {
   "LOG": true,
   "LOG_LEVEL": "info",
@@ -98,6 +99,7 @@ Copy and paste this text into the file that opens. **Replace `YOUR_QWEN_ACCESS_T
     "webSearch": "qwen,qwen3-coder-plus"
   }
 }
+```
 
 ### Step 7: Start the Router
 In PowerShell, run:
