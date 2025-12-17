@@ -1,77 +1,107 @@
-# Claude Code Setup With Qwen - Simple Guide for Beginners
+#Claude Code Setup With Qwen – Roman Urdu Simple Guide
 
-This guide will help you set up Claude Code to work with Alibaba's Qwen models. Follow these simple steps:
+Ye guide aapko step-by-step samjhaye gi ke Claude Code ko Alibaba Qwen models ke sath kaise setup karna hai.
 
-## Prerequisites
+#Prerequisites
 
-Before beginning, make sure you have:
+Setup shuru karne se pehle ye cheezen lazmi hain:
 
-* **Node.js v18 or later** installed
-* **PowerShell** (comes with Windows)
+Node.js v18 ya us se upar
 
-Check if Node.js is installed by opening PowerShell and running:
-```
+PowerShell (Windows ke sath already hoti hai)
+
+#NodeJS_Check
+
+PowerShell open karo aur ye command run karo:
+
 node --version
-```
-If version is 18 or higher, continue. Otherwise, download from [https://nodejs.org](https://nodejs.org)
 
-## Setup Steps
 
-### Step 1: Install Claude Code and Router
-Open PowerShell, Run This Command:
-```
+Agar output mein v18 ya us se zyada ho → ✅ continue karo
+Agar nahi ho → Node.js yahan se install karo:
+
+https://nodejs.org
+
+#Step_1_Install_Claude_Code_And_Router
+
+PowerShell open karo aur ye command paste karo:
+
 npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
-```
-Chek if it Installed :
-```
+
+#Install_Check
 ccr --version
-or
+
+
+ya
+
 ccr --help
-```
 
-### Step 2: Install Qwen CLI
-In PowerShell, Run This Command:
-```
+
+Agar response aa jaye to matlab install theek hai ✅
+
+#Step_2_Install_Qwen_CLI
+
+PowerShell mein ye command run karo:
+
 npm install -g @qwen-code/qwen-code@latest
-```
-Chek if it Installed :
-```
+
+#Qwen_Check
 qwen --version
-```
 
-### Step 3: Login to Qwen
-In PowerShell, run:
-```
+
+Agar version show ho jaye → Qwen CLI sahi install ho chuki hai ✅
+
+#Step_3_Qwen_Login
+
+PowerShell mein ye likho:
+
 qwen
-```
-Follow the login steps in your browser.
 
 
-```
+Browser open hoga
 
-### Step 4: Find Your Qwen Access Token
-Look for this file on your computer:
-```
+Login steps follow karo
+
+Login complete hone ke baad PowerShell band mat karo
+
+#Step_4_Find_Qwen_Access_Token
+
+Apne system mein is file ko open karo:
+
 C:\Users\YourUsername\.qwen\oauth_creds.json
-```
-Open it with Notepad and copy the text after `"access_token": "` (without the quotes).
 
-### Step 5: Create Config Folders
-In PowerShell, run:
-```
+
+YourUsername = aap ka Windows username
+
+Is file ko Notepad mein open karo aur yahan se token copy karo:
+
+"access_token": "PASTE_THIS_TOKEN"
+
+
+⚠️ Sirf token copy karna hai, quotes ke baghair
+
+#Step_5_Create_Config_Folders
+
+PowerShell mein ye commands run karo:
+
 New-Item -ItemType Directory -Path "$env:USERPROFILE\.claude-code-router" -Force
 New-Item -ItemType Directory -Path "$env:USERPROFILE\.claude" -Force
-```
 
-### Step 6: Create Router Configuration
-In PowerShell, run:
-```
+
+Ye commands required folders create kar dengi.
+
+#Step_6_Create_Router_Config_File
+
+PowerShell mein ye command run karo:
+
 notepad "$env:USERPROFILE\.claude-code-router\config.json"
-```
 
-```
-Copy and paste this text into the file that opens. **Replace `YOUR_QWEN_ACCESS_TOKEN_HERE` with your actual access token from Step 4**:
-```
+
+Notepad open hoga. Us mein neeche diya gaya code paste karo.
+
+⚠️ IMPORTANT
+YOUR_QWEN_ACCESS_TOKEN_HERE ki jagah apna real access token paste karo.
+
 {
   "LOG": true,
   "LOG_LEVEL": "info",
@@ -100,37 +130,77 @@ Copy and paste this text into the file that opens. **Replace `YOUR_QWEN_ACCESS_T
   }
 }
 
-### Step 7: Start the Router
-In PowerShell, run:
-```
+
+File Save karo aur Notepad band kar do.
+
+#Step_7_Start_Router
+
+PowerShell mein ye command run karo:
+
 ccr restart
-```
-Wait until you see "Service started successfully"
 
-### Step 8: Test Claude Code
-In PowerShell, run:
-```
+
+Agar ye message aaye:
+
+Service started successfully
+
+
+to router sahi chal raha hai ✅
+
+#Step_8_Test_Claude_Code
+
+PowerShell mein likho:
+
 ccr code
-```
-When the interface opens, type `hi` and press Enter to test.
 
-## Troubleshooting
 
-If you have problems:
+Claude Code interface open hoga.
+Wahan type karo:
 
-1. **"Command not found" errors**: Make sure Node.js is installed and reopen PowerShell after installing packages
-2. **Token errors**: Double-check you copied the access token correctly from the .qwen/oauth_creds.json file
-3. **Router won't start**: Make sure port 3456 is not used by another program
-4. **Config file not found**: Make sure you created the config.json file in the correct location
+hi
 
-## Quick Checklist
 
-- [ ] Node.js installed (`node --version` shows 18 or higher)
-- [ ] Qwen CLI installed and logged in (`qwen` command works)
-- [ ] Claude Code and Router installed
-- [ ] Config file created with your access token
-- [ ] Router started successfully (`ccr restart`)
-- [ ] Test works (`ccr code` then type `hi`)
+Aur Enter press karo.
+Agar reply aa jaye → 🎉 setup successful.
 
- #Follow On Linkedln :
- https://www.linkedin.com/in/hamza-shakoor-6a4350180/
+#Troubleshooting
+#Command_Not_Found
+
+Node.js check karo
+
+PowerShell close kar ke dobara open karo
+
+#Token_Error
+
+Token dobara check karo
+
+File path sahi ho:
+
+.qwen/oauth_creds.json
+
+#Router_Not_Starting
+
+Port 3456 kisi aur app ke use mein na ho
+
+#Config_File_Issue
+
+Confirm karo file yahan mojood ho:
+
+C:\Users\YourUsername\.claude-code-router\config.json
+
+#Quick_Checklist
+
+ node --version → 18+
+
+ qwen command login working
+
+ Claude Code & Router installed
+
+ Access token config mein added
+
+ ccr restart successful
+
+ ccr code test working
+
+#Follow_On_LinkedIn
+https://www.linkedin.com/in/hamza-shakoor-6a4350180/
