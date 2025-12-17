@@ -1,10 +1,8 @@
 # Claude Code Setup With Qwen - Roman Urdu Simple Guide
 
-```
 Ye guide aapko step by step samjhaye gi ke Claude Code ko
 Alibaba Qwen models ke sath kaise setup karna hai.
-```
-Copy code
+
 ## Prerequisites
 
 Setup shuru karne se pehle ye cheezen lazmi hain:
@@ -12,12 +10,13 @@ Setup shuru karne se pehle ye cheezen lazmi hain:
 - Node.js v18 ya us se upar
 - PowerShell (Windows ke sath already hoti hai)
 arduino
-Copy code
 ### Node.js Version Check
 
 PowerShell open karo aur ye command run karo:
 
+```
 node --version
+```
 
 Agar output mein v18 ya us se zyada ho to continue karo.
 Agar nahi ho to Node.js yahan se install karo:
