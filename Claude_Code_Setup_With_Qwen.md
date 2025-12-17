@@ -12,9 +12,6 @@ Setup shuru karne se pehle ye cheezen lazmi hain:
 - 
 ### Node.js Version Check
 
-Har Baar PowerShell Window Directory Py hi Open Krna Hai , Keyboard Sy Window KA Button press Kry Opr Powershell Likhy.
-PowerShell open karo aur ye command run karo:
-
 ```
 node --version
 ```
@@ -24,8 +21,8 @@ Agar nahi ho to Node.js yahan se install karo:
 https://nodejs.org
 
 ## Step 1: Claude Code aur Router Install karo
-
-PowerShell open karo aur ye command paste karo:
+Har Baar PowerShell Window Directory Py hi Open Krna Hai , Keyboard Sy Window Ka Button press Kry Or Powershell Likhy.
+PowerShell open karo aur ye command run karo:
 
 ```
 npm install -g @anthropic-ai/claude-code @musistudio/claude-code-router
@@ -43,7 +40,6 @@ Agar command chal jaye to matlab install successful hai.
 ## Step 2: Qwen CLI Install karo
 
 PowerShell mein ye command run karo:
-
 
 ```
 npm install -g @qwen-code/qwen-code@latest
@@ -64,13 +60,14 @@ Browser open hoga.
 Login steps follow karo.
 Login complete hone ke baad PowerShell band mat karo.
 
-## Step 4:Config Folders Create karo
+## Step 4:Configration Ky Liaye
 New PowerShell Open Kro Or Yee Command Runn Kro:
 
 ```
 code .
 ```
-VS Code Open Hoga Waha root directory main 1 folder create kroo " .claude-code-route " ky name sy then us main 1 file create kroo " config.json " is file main yee code paste kro or save kroo"
+VS Code Open Hoga Waha yee folder find kro root directory main " .caude-code-router " ugr mill jaye too good nhi mily to manully ctreate kroo.
+Root directory main 1 folder create kroo " .claude-code-route " ky name sy then us main 1 file create kroo " config.json " is file main yee code paste kro or save kroo"
 
 ```
 {
@@ -104,7 +101,7 @@ VS Code Open Hoga Waha root directory main 1 folder create kroo " .claude-code-r
 
 ## Step 5: Qwen Access Token Find karo
 
-Rot Directory main 1 folder find kroo " .qwen " ky name sy hoga usy open kroo us main 1 file hogi " oauth_creds.json " us file ko open kroo or waha sy access token copy kroo or " .claude-code-router " main " config.json " file main api ki gaha yee access tokrn paste kro or save kro :
+Rot Directory main 1 folder find kroo " .qwen " ky name sy hoga usy open kroo us main 1 file hogi " oauth_creds.json " us file ko open kroo or waha sy access token copy kroo or " .claude-code-router " main " config.json " file main "api_key" ki gaha yee access tokrn paste kro or save kro :
 
 ## Step 6: Router Start karo
 
